@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript test</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/kendo-ui/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="bower_components/kendo-ui/styles/kendo.bootstrap.min.css">
+    <script src="bower_components/tinymce/tinymce.min.js"></script>
+    <script src="bower_components/ckeditor/ckeditor.js"></script>      	        	
+</head>
+
+<body>
+    <div class="col-md-12">
+        <h4>TinyMce</h4>        
+        <div class="row">
+            <div class="col-md-6">                
+                <textarea id="tinymce">Easy! You should check out MoxieManager!</textarea>                
+            </div>
+            <div class="col-md-6">
+                <textarea id="tinymce-full">Easy! You should check out MoxieManager!</textarea>                
+            </div>            
+        </div>
+        <h4>CKEditor</h4>
+        <div class="row">
+            <div class="col-md-6">
+                <textarea name="ckeditor" id="ckeditor" rows="10" cols="80">
+                    This is my textarea to be replaced with CKEditor.
+                </textarea>                                                
+            </div>
+            <div class="col-md-6">
+                <textarea name="ckeditor-full" id="ckeditor-full" rows="10" cols="80">
+                    This is my textarea to be replaced with CKEditor.
+                </textarea>                                
+            </div>            
+        </div>        
+    </div>
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/kendo-ui/js/kendo.all.min.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>      	
+    <script type="text/javascript" src="js/ktest.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
+<script>
+
+    // default
+    CKEDITOR.replace( 'ckeditor' );    
+    
+    // full, konfiguracija custom dodana u tynimce/config.js
+    CKEDITOR.replace( 'ckeditor-full',
+    {
+        //toolbar : 'Basic',
+        toolbar : 'Full'
+    })
+       
+    
+    // default 
+    tinymce.init({ selector:'#tinymce' });    
+        
+    // full
+    tinymce.init({
+    selector: '#tinymce-full',
+    //height: 500,
+    theme: 'modern',
+    plugins: [
+        'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+        'searchreplace wordcount visualblocks visualchars code fullscreen',
+        'insertdatetime media nonbreaking save table contextmenu directionality',
+        'emoticons template paste textcolor colorpicker textpattern imagetools'
+    ],
+    toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+    toolbar2: 'print preview media | forecolor backcolor emoticons',
+    image_advtab: true,
+    templates: [
+        { title: 'Test template 1', content: 'Test 1' },
+        { title: 'Test template 2', content: 'Test 2' }
+    ],
+    content_css: [
+        '//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
+        '//www.tinymce.com/css/codepen.min.css'
+    ]
+    });    
+    
+    // tinymce - jednostavnija konfiguracija
+    
+</script>
