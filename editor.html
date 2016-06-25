@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="bower_components/kendo-ui/styles/kendo.common.min.css">
     <link rel="stylesheet" href="bower_components/kendo-ui/styles/kendo.bootstrap.min.css">
     <script src="bower_components/tinymce/tinymce.min.js"></script>
-    <script src="bower_components/ckeditor/ckeditor.js"></script>      	        	
+    <script src="bower_components/ckeditor/ckeditor.js"></script> 
+    <link href="bower_components/ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">         	        	
 </head>
 
 <body>
@@ -54,8 +55,7 @@
     // full, konfiguracija custom dodana u tynimce/config.js
     CKEDITOR.replace( 'ckeditor-full',
     {
-        //toolbar : 'Basic',
-        toolbar : 'Full'
+        //customConfig: '/custom/ckeditor_config.js'                       
     })
        
     

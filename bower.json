@@ -17,7 +17,7 @@
     "bootstrap": "~3.3.6",
     "jquery": "~2.2.0",
     "Countries": "countries#~1.0.4",
-    "kendo-ui": "kendo-ui-core#~2016.1.226+SP1",
+    "kendo-ui": "kendo-ui-core#master",
     "tinymce": "~4.3.8",
     "ckeditor": "~4.5.7"
   }
